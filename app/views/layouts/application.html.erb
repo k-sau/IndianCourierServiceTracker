@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% if content_for?(:meta) %>
+   <%= yield(:meta) %>
+ <% end %>
+  <meta name="referrer" content="no-referrer" />
+  <title><%= yield(:title) %> Courier Tracking | Indian Courier Service Tracking</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+  <nav class="navbar navbar-default">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+    <%= link_to "Indian Courier Service Tracking", root_path, class: "navbar-brand"%>
+    </div>
+      <ul class="nav navbar-right">
+        <li>
+          <%= link_to "Contact", contact_path%>
+        </li>
+      </ul>
+
+  </nav>
+  </div>
+  <div class="container">
+      <center>
+          <div class="well">
+            <h4>
+              Track from almost any courier service provider in India from given below!
+            </h4>
+        </div>
+    <%= render 'ads/responsiveads' %>
+  </center>
+  </div>
+
+  <div class="wrapper">
+  <%= yield %>
+  <div class="push"></div>
+<div class="container">
+<center>  <%= render 'ads/responsiveads' %> </center>
+    <div id="footer" class="footer">
+      <b>Disclaimer:</b> All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
+      <br>
+      <center>Made with <div class="glyphicon glyphicon-heart"></div> by <a href="http://www.ksaurabh.net">Kumar</a>!</center>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<%= render 'layouts/footer' %>
+</body>
+</html>

@@ -1,0 +1,2 @@
+module IndiaspeedpostsHelper
+end

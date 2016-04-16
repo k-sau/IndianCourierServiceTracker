@@ -1,0 +1,2 @@
+module AirwingssHelper
+end

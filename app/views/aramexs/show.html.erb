@@ -1,0 +1,22 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+  <br>
+  <br>
+<p>
+
+    <a href="http://www.aramex.com/track_results_multiple.aspx?ShipmentNumber=<%= @Airwaybill %>" class= "glyphicon glyphicon-send btn btn-danger">
+       Click here to track it on courier service's page :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <!-- iframe-->
+</div>
+<% end %>

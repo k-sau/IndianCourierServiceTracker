@@ -1,0 +1,21 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <div class="panel panel-default">
+      <%= render 'forms/form' %>
+
+    </div>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://gojavas.com/docket_details.php?pop=docno&docno=<%= @Airwaybill %>" class="glyphicon glyphicon-send btn btn-danger">
+       Click here to track it on courier service's page :)
+    </a>
+  </center>
+</p>
+<div class="container-fluid embed-responsive embed-responsive-16by9">
+    <!-- -->
+</div>
+<% end %>

@@ -1,0 +1,2 @@
+module TntsHelper
+end

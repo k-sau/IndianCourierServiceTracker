@@ -1,0 +1,2 @@
+module FlykingsHelper
+end

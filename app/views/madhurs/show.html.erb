@@ -1,0 +1,18 @@
+<title>DTDC</title>
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://www.madhurcouriers.in/tracking.htm?cn=C-Note&cnoteno=<%= @Airwaybill %>&Submit=Search" class= "btn btn-success glyphicon glyphicon-send"> Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.madhurcouriers.in/tracking.htm?cn=C-Note&cnoteno=<%= @Airwaybill %>&Submit=Search" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

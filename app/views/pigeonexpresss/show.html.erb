@@ -1,0 +1,20 @@
+<% if @Airwaybill.blank? %>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+<br>
+    <a href="http://www.pigeonexpress.com/tracking.aspx?Track=<%= @Airwaybill %>" class= "btn btn-success glyphicon glyphicon-send">
+       Click here if you don't see anything below :)
+    </a>
+</p>
+</center>
+<div class="row-fluid">
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.pigeonexpress.com/tracking.aspx?Track=<%= @Airwaybill %>" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<% end %>

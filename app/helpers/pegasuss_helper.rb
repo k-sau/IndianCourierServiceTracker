@@ -1,0 +1,2 @@
+module PegasussHelper
+end

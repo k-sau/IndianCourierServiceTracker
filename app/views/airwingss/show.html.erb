@@ -1,0 +1,19 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+<p>
+
+    <a href="http://www.airwingsindia.com/Awbtrack.asp" class= "btn btn-success">Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.airwingsindia.com/Awbtrack.asp" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

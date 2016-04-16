@@ -1,0 +1,20 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <div class="panel panel-default">
+      <%= render 'forms/form' %>
+
+    </div>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://track.aftership.com/delhivery/<%= @Airwaybill %>" class= "btn btn-success">Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://track.aftership.com/delhivery/<%= @Airwaybill %>" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

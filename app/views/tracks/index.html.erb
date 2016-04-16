@@ -1,0 +1,22 @@
+<% content_for :meta do %>
+<meta name="description" content="Courier Tracker! Track shipments track couriers track consignments track from almost any courier service provider in India such as blue dart speed post dtdc aramex dotzot dhl." />
+ <meta name="keywords" content="indian speed post dotzot dtdc bluedart aramex gojavas delhivery fedex first flight dhl red express courier shipment consignment tracking" />
+<% end %>
+<center>
+    <%= render 'forms/form' %>
+</center>
+<br>
+<br>
+<div class="container">
+<div class="row multi-column">
+  <ul>
+<% @cservice.each do |cservice| %>
+  <li>
+    <div class="well well-sm">
+    <a href="/tracking/<%= cservice.name.gsub(/\s+/, "") %>/<%= cservice.id %>"><%= cservice.name %> Courier Tracking</a>
+</div>
+</li>
+<% end %>
+</ul>
+</div>
+</div>

@@ -1,0 +1,20 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+  <br>
+  <br>
+<p>
+
+    <a href="http://www.safexpress.com/" class= "glyphicon glyphicon-send btn btn-danger">
+       Due to some technical problem we can't track it. Click here to track it on courier service's page :)
+    </a>
+  </center>
+</p>
+
+<% end %>

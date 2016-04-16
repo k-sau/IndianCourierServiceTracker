@@ -1,0 +1,20 @@
+<title>DTDC</title>
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+<p>
+
+    <a href="http://www.akashganga.info/Tracking.aspx?ConNo=<%= @Airwaybill %>" class= "btn btn-success">Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.akashganga.info/Tracking.aspx?ConNo=<%= @Airwaybill %>" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

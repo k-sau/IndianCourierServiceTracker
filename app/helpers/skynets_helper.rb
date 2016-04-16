@@ -1,0 +1,2 @@
+module SkynetsHelper
+end

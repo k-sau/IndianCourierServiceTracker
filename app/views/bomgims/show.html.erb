@@ -1,0 +1,19 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+  <br>
+  <br>
+<p>
+
+    <a href="http://www.bomgim.com/tracking.html" class= "glyphicon glyphicon-send btn btn-danger"> Click here to track it on courier service's page :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.bomgim.com/tracking.html" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

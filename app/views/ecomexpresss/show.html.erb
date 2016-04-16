@@ -1,0 +1,18 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="https://billing.ecomexpress.in/track_me/multipleawb_open/?awb=<%= @Airwaybill %>&order=" class= "btn btn-success glyphicon glyphicon-send">
+       Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://billing.ecomexpress.in/track_me/multipleawb_open/?awb=<%= @Airwaybill %>&order=" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

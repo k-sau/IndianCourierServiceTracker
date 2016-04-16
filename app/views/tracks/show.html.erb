@@ -1,0 +1,40 @@
+<% provide(:title, @cservices.name)%>
+<% content_for :meta do %>
+<meta name="description" content="<%= @cservices.name %> contact address details and courier, shipment, consignment tracking." />
+<meta name="keywords" content="<%= @cservices.name %> courier tracking tracker shipment consignment contact address details" />
+<% end %>
+<center>
+  <div class="container">
+  <div id="bod"></div>
+  </div>
+    <%= form_tag track_path, class: "navbar-form" do |f| %>
+    <div class="form-group">
+      <%= select_tag(:Cservice, options_for_select(@selectService, :selected => params[:id]), class: "form-control", :prompt => "Select a Courier Service") %>
+      <%= label_tag(:airwaybill, "Tracking code:") %>
+      <%= text_field_tag (:airwaybill), nil, class: "form-control", placeholder: "Enter your tracking code" %>
+    </div>
+      <%= submit_tag "Track", class: "btn btn-primary"%>
+    <% end %>
+    <div class="container">
+    <div id="bod"></div>
+    </div>
+</center>
+<br>
+<div class="container">
+<center>
+  <h3><%= simple_format(@cservices.name + " Contact Details and Address | Courier Tracking")%></h3>
+</center>
+<% if @cservices.description.present? %>
+<p><h5><%= simple_format(@cservices.description, class: "well well-lg") %></h5></p>
+<% end %>
+    <div class="com-sm-5 col-md-5">
+      <div class="">
+  <%= render 'ads/rect' %>
+</div>
+    </div>
+<% if @cservices.address.present? %>
+<div class="col-sm-7 col-md-7">
+<p><h5><%= simple_format(@cservices.address, class: "well well-lg") %></h5></p>
+</div>
+<% end %>
+</div>

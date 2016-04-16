@@ -1,0 +1,2 @@
+module EaglesHelper
+end

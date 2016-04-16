@@ -1,0 +1,54 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.multi-column {
+-moz-column-count: 3;
+-webkit-column-count: 3;
+column-count: 3;}
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em; /* the bottom margin is the negative value of the footer's height */
+}
+.footer .push {
+  height: 4em; /* .push must be the same height as .footer */
+}
+
+
+div#bod {
+  margin-top: 6px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+.footer {
+  position: absolute;
+  margin-top: auto;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+.footer a {
+  color: #555;
+}
+
+.footer a:hover {
+  color: #222;
+}
+
+.nav > li > a {
+    position: relative;
+    top: 5px;
+    right: 20px;
+    display: block;
+    padding: 10px 15px;
+}

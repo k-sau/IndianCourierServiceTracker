@@ -1,0 +1,21 @@
+<% if @Airwaybill.blank? %>
+<center>
+    <%= render 'forms/form' %>
+</center>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+<p>
+
+    <a href="http://www.poonamcourier.com/tracking.aspx" class= "btn btn-success glyphicon glyphicon-send">
+       Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.poonamcourier.com/tracking.aspx" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

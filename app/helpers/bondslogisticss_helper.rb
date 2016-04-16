@@ -1,0 +1,2 @@
+module BondslogisticssHelper
+end

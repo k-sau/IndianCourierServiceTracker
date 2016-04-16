@@ -1,0 +1,18 @@
+<title>DTDC</title>
+<% if @dtdcAirwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://dtdc.in/tracking/tracking_results.asp?action=track&sec=tr&ctlActiveVal=1&Ttype=awb_no&strCnno=<%= @dtdcAirwaybill %>&GES=N&TrkType2=awb_no&strCnno2=<%= @dtdcAirwaybill %>" class= "btn btn-success">Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://dtdc.in/tracking/tracking_results.asp?action=track&sec=tr&ctlActiveVal=1&Ttype=awb_no&strCnno=<%= @dtdcAirwaybill %>&GES=N&TrkType2=awb_no&strCnno2=<%= @dtdcAirwaybill %>" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

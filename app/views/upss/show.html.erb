@@ -1,0 +1,20 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+  <br>
+  <br>
+<p>
+
+    <a href="https://wwwapps.ups.com/WebTracking/track?HTMLVersion=5.0&loc=en_IN&Requester=UPSHome&WBPM_lid=homepage%252Fct1.html_pnl_trk&trackNums=<%= @Airwaybill %>" class= "glyphicon glyphicon-send btn btn-danger">
+       Due to some technical problem we can't track it. Click here to track it on courier service's page :)
+    </a>
+  </center>
+</p>
+
+<% end %>

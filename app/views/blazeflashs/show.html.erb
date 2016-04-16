@@ -1,0 +1,21 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <center>
+      <%= render 'forms/form' %>
+  </center>
+  <br>
+  <br>
+<p>
+
+    <a href="http://www.blazeflash.com/TrackDetail.aspx?awbno=<%= @Airwaybill %>" class= "glyphicon glyphicon-send btn btn-danger"> Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.blazeflash.com/TrackDetail.aspx?awbno=<%= @Airwaybill %>" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

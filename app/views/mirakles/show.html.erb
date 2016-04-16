@@ -1,0 +1,19 @@
+<title>DTDC</title>
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://www.miraklecouriers.com/track/?ewd-otp-action=track&field-labels=&Tracking_Number=<%= @Airwaybill %>&Login_Submit=Track" class= "btn btn-success glyphicon glyphicon-send">
+       Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://www.miraklecouriers.com/track/?ewd-otp-action=track&field-labels=&Tracking_Number=<%= @Airwaybill %>&Login_Submit=Track" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

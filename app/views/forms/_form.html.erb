@@ -1,0 +1,14 @@
+<div class="container">
+<div id="bod"></div>
+</div>
+<%= form_tag track_path, class: "navbar-form" do %>
+<div class="form-group">
+  <%= select_tag(:Cservice, options_for_select(@selectService), class: "form-control", :prompt => "Select a Courier Service") %>
+  <%= label_tag(:airwaybill, "Tracking code:") %>
+  <%= text_field_tag (:airwaybill), nil, class: "form-control", placeholder: "Enter your tracking code" %>
+</div>
+  <%= submit_tag "Track", class: "btn btn-primary"%>
+<% end %>
+<div class="container">
+<div id="bod"></div>
+</div>

@@ -1,0 +1,17 @@
+<% if @Airwaybill.blank? %>
+  <center>
+    <%= render 'forms/form' %>
+  </center>
+<% else %>
+<center>
+  <%= render 'forms/form' %>
+<p>
+
+    <a href="http://webxpress.cci-logistics.com/track_trace.asp" class= "btn btn-success">Click here if you don't see anything below :)
+    </a>
+  </center>
+</p>
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="http://webxpress.cci-logistics.com/track_trace.asp" frameborder="0" allowfullscreen></iframe>
+</div>
+<% end %>

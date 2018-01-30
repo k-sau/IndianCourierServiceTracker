@@ -1,3 +1,5 @@
+Update 30 Jan 2018: This project is no longer maintained and possibly contains vulnerabilities.
+
 # IndianCourierServiceTracker
 This web app is written in rails, this tracks the courier through iframe if courier company site's don't have X-Frame-Options header available in their response.
 
